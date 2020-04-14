@@ -50,7 +50,7 @@ def signup(request):
 	obj  = Client(user=user,state=State,city=City,phone_number=PhoneNumber)
 	obj.save()
 	PARAMS = {'username':Email,'password': Password}
-	r = requests.post('https://leaid.herokuapp.com/auth-jwt/',PARAMS)
+	r = requests.post('https://vlawyer-backend.herokuapp.com/auth-jwt/',PARAMS)
 	obj = r.json()
 	return JsonResponse(obj)
 
@@ -94,7 +94,7 @@ def editProfile(request):
 	client = Client.objects.get(user=user)
 	Clientid = client.id
 	
-	if photo.find('https://leaid.herokuapp.com') == -1:
+	if photo.find('https://vlawyer-backend.herokuapp.com') == -1:
 		data = photo.split(',')[1]
 		imgdata = base64.b64decode(data)
 		filename = username + '.jpg'
