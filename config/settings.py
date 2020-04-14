@@ -41,7 +41,7 @@ CORS_ALLOW_HEADERS = (
     'x-csrftoken',
     'x-requested-with',
 )
-ALLOWED_HOSTS = ['103.255.5.65', '127.0.0.1', '192.168.0.149', 'localhost','https://leaid-client.herokuapp.com'
+ALLOWED_HOSTS = ['103.255.5.65', '127.0.0.1', '192.168.0.149', 'localhost','https://leaid-client.herokuapp.com','http://virtual-lawyer.herokuapp.com/'
 ]
 
 # CORS_ORIGIN_ALLOW_ALL=True
