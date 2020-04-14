@@ -41,7 +41,7 @@ def getSavedLawyers(request):
 		obj['hcr_number'] = lawyer.hcr_number
 		obj['rate'] = lawyer.rate
 		if lawyer.image:
-			obj['image'] = "{0}{1}".format("https://leaid.herokuapp.com", lawyer.image.url)
+			obj['image'] = "{0}{1}".format("https://vlawyer-backend.herokuapp.com", lawyer.image.url)
 	return JsonResponse(data,safe=False)
 
 @api_view(['POST'])
