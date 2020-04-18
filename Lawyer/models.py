@@ -9,7 +9,7 @@ class Lawyer(models.Model):
 	about = models.CharField(max_length=300,null=True)
 	contact = models.CharField(max_length=300,null=True)
 	city = models.CharField(max_length=30)
-	state = models.CharField(max_length=30)
+	state = models.CharField(max_length=30,null=True)
 	phone_number = models.CharField(max_length=30)
 	liscence_number = models.IntegerField()
 	year_admitted = models.DateTimeField()
