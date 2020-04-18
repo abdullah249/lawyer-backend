@@ -10,7 +10,7 @@ class Lawyer(models.Model):
 	contact = models.CharField(max_length=300,null=True)
 	city = models.CharField(max_length=30)
 	state = models.CharField(max_length=30,null=True)
-	phone_number = models.CharField(max_length=30)
+	phone_number = models.CharField(max_length=30,null=True)
 	liscence_number = models.IntegerField()
 	year_admitted = models.DateTimeField()
 	hcr_number = models.IntegerField(unique=True)
