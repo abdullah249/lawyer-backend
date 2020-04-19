@@ -19,9 +19,22 @@ def add_orders(request):
 		username = request.data.get('username',None)
 	except MultiValueDictKeyError:
 		return JsonResponse({"Error":"username is required"},status=500)	
+	try:
+		text = request.data.get('title',None)
+	except MultiValueDictKeyError:
+		return JsonResponse({"Error":"title is required"},status=500)
+	try:
+		description = request.data.get('description',None)
+	except MultiValueDictKeyError:
+		return JsonResponse({"Error":"Description is required"},status=500)
+	try:
+		catogery = request.data.get('price',None)
+	except MultiValueDictKeyError:
+		return JsonResponse({"Error":"price is required"},status=500)
 	user = User.objects.get(username=username)
-	obj  = Orders(title=title,description=description,price=price,user=user)
-	return JsonResponse(list(obj),safe=False,status=200)	
+	neworder  = Orders(title=title,description=description,price=price,user=user)
+	neworder.save()
+	return JsonResponse({"data": "Successful"},status=200)	
 
 
 
