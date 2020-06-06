@@ -19,7 +19,7 @@ constantly==15.1.0
 cryptography==2.6.1
 daphne==1.2.0
 dj-database-url==0.5.0
-Django==1.11
+Django==1.11.29
 django-celery-beat==1.0.1
 django-channels-presence==0.0.7
 django-cors-headers==2.5.2
